@@ -5,6 +5,7 @@ FROM node:12
 WORKDIR /app
 
 # Layer 3 - First Argument: Local package.json, Second Argument: The place we want to copy it in the container (current working directory)
+# (*) Wildcard will match with everything that is between package and .json 
 COPY package*.json ./
 
 # Layer 4 - This is just like opening a terminal session and runnning a command 
